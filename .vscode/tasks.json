@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Python with I/O (Shared Root)",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "python \"${file}\" < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\""
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
